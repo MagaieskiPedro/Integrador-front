@@ -1,0 +1,12 @@
+.container{
+    font-family: poppins;
+    font-size:32px;
+}
+
+.container section{
+    padding: 10%;
+    width: 50%;
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+}

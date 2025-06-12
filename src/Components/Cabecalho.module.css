@@ -1,0 +1,40 @@
+.container{
+    background-color: #FFFFFF;
+    height: 155px;
+    display: flex;
+    align-items: center;
+    border-bottom-style: solid ;
+    border-color: #A9A9A9;
+    border-width: 2px;
+}
+.container header{
+    height: 150px;
+    position:sticky
+}
+.container nav{
+    padding-left: 246px;
+}
+.container ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 159px;
+    
+}
+.container li{
+    font-size:32px;
+}.container li:hover{
+    color:orange;   
+}
+.container a:link{
+    color:#000000;
+    text-decoration: none;
+    
+}
+.container h1{
+    margin-left: 46px;
+    font-size: 48px;
+    color: #000000;
+    font-family: Porter Sans Block;
+    text-align: center;
+}
