@@ -1,17 +1,18 @@
-export function Home(){
+import estilo from "./Cadastro.module.css"
+
+export function Cadastro(){
 
     return(
         <main className={estilo.container}>
             <section>
-                <h1>Monitoramento de sensores</h1>
+                <h1>Aqui fica o cadastro</h1>
+                <form action="">
+                    <input type="text" name="" id="" />
+                    <input type="text" name="" id="" />
+                    <input type="text" name="" id="" />
+                </form>
+
                 
-                <p>
-                    cad
-                    Aqui você pode monitorar valores historicos dos sensores
-                    e adicionar, editar e deletar valores desses sensores.
-                    Cadastre-se para ter acesso ao historico e se você for
-                    admininstrador, poder então manipular os dados dos sensores
-                </p>
             </section>
 
         </main>

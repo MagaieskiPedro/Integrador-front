@@ -1,17 +1,13 @@
-export function Home(){
+import estilo from "./Historico.module.css"
+
+export function Historico(){
 
     return(
         <main className={estilo.container}>
             <section>
-                <h1>Monitoramento de sensores</h1>
+                <h1>Aqui fica o CRUD</h1>
                 
-                <p>
-                    his
-                    Aqui você pode monitorar valores historicos dos sensores
-                    e adicionar, editar e deletar valores desses sensores.
-                    Cadastre-se para ter acesso ao historico e se você for
-                    admininstrador, poder então manipular os dados dos sensores
-                </p>
+                
             </section>
 
         </main>
