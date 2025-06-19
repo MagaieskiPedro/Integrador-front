@@ -1,5 +1,5 @@
 import estilo from './Home.module.css';
-
+import img from '../assets/smart-city.svg'
 
 export function Home(){
 
@@ -14,8 +14,9 @@ export function Home(){
                     Cadastre-se para ter acesso ao historico e se você for
                     admininstrador, poder então manipular os dados dos sensores
                 </p>
+                
             </section>
-
+            <img src={img} alt="Imagem cidade inteligente" />
         </main>
     )
 }

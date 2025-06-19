@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 25%;
+    margin-top: 5%;
+    margin-bottom: 3.6%;
 }
 .container button{
     border: none;

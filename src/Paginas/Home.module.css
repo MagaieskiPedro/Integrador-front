@@ -1,12 +1,18 @@
 .container{
     font-family: poppins;
     font-size:32px;
+    display: flex;
+    flex-direction: row;
 }
-
+.container img{
+    width: 30%;
+}
 .container section{
-    padding: 10%;
     width: 50%;
     gap: 1em;
     display: flex;
     flex-direction: column;
+    margin-bottom: 61px;
+    margin-top: 61px;
+    margin-left: 150px;
 }

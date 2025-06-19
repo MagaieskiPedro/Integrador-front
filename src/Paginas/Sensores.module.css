@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 25%;
+    margin-top: 5%;
+    margin-bottom: 11.8%;
 }
 .container h1{
     margin-bottom: 20px;
@@ -23,7 +24,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    margin-left: 35%;
+    margin-left: 450px;
     margin-bottom: 10px;
     width: 129px;
     height: 28px;

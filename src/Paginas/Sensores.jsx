@@ -43,6 +43,79 @@ export function Sensores(){
                             </Link>
                             <td><button className={estilo.deletar}><FontAwesomeIcon icon={faTrash}  size="sm"/></button></td> 
                         </tr>
+                        <tr>
+                            <td>Sensor</td>
+                            <td>Endereço mac</td>
+                            <td>Unidade de medida</td>
+                            <td>Latitude</td>
+                            <td>Longitude</td>
+                            <td>Status</td>
+
+                            {/* ${item.id} */}
+                            <Link to={`/sensores/1`} >
+                                <td><button className={estilo.editar}><FontAwesomeIcon icon={faPenToSquare} /></button></td> 
+                            </Link>
+                            <td><button className={estilo.deletar}><FontAwesomeIcon icon={faTrash}  size="sm"/></button></td> 
+                        </tr>
+                        <tr>
+                            <td>Sensor</td>
+                            <td>Endereço mac</td>
+                            <td>Unidade de medida</td>
+                            <td>Latitude</td>
+                            <td>Longitude</td>
+                            <td>Status</td>
+
+                            {/* ${item.id} */}
+                            <Link to={`/sensores/1`} >
+                                <td><button className={estilo.editar}><FontAwesomeIcon icon={faPenToSquare} /></button></td> 
+                            </Link>
+                            <td><button className={estilo.deletar}><FontAwesomeIcon icon={faTrash}  size="sm"/></button></td> 
+                        </tr>
+                        <tr>
+                            <td>Sensor</td>
+                            <td>Endereço mac</td>
+                            <td>Unidade de medida</td>
+                            <td>Latitude</td>
+                            <td>Longitude</td>
+                            <td>Status</td>
+
+                            {/* ${item.id} */}
+                            <Link to={`/sensores/1`} >
+                                <td><button className={estilo.editar}><FontAwesomeIcon icon={faPenToSquare} /></button></td> 
+                            </Link>
+                            <td><button className={estilo.deletar}><FontAwesomeIcon icon={faTrash}  size="sm"/></button></td> 
+                        </tr>
+                        <tr>
+                            <td>Sensor</td>
+                            <td>Endereço mac</td>
+                            <td>Unidade de medida</td>
+                            <td>Latitude</td>
+                            <td>Longitude</td>
+                            <td>Status</td>
+
+                            {/* ${item.id} */}
+                            <Link to={`/sensores/1`} >
+                                <td><button className={estilo.editar}><FontAwesomeIcon icon={faPenToSquare} /></button></td> 
+                            </Link>
+                            <td><button className={estilo.deletar}><FontAwesomeIcon icon={faTrash}  size="sm"/></button></td> 
+                        </tr>
+                        <tr>
+                            <td>Sensor</td>
+                            <td>Endereço mac</td>
+                            <td>Unidade de medida</td>
+                            <td>Latitude</td>
+                            <td>Longitude</td>
+                            <td>Status</td>
+
+                            {/* ${item.id} */}
+                            <Link to={`/sensores/1`} >
+                                <td><button className={estilo.editar}><FontAwesomeIcon icon={faPenToSquare} /></button></td> 
+                            </Link>
+                            <td><button className={estilo.deletar}><FontAwesomeIcon icon={faTrash}  size="sm"/></button></td> 
+                        </tr>
+                        
+                        
+                        
                     </tbody>
 
                 </table>
