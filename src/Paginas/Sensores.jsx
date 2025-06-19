@@ -1,17 +1,20 @@
 import estilo from "./Sensores.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCirclePlus,faPenToSquare,faTrash } from "@fortawesome/free-solid-svg-icons";
+import { Link } from 'react-router-dom';
+
 export function Sensores(){
 
     return(
         <main className={estilo.container}>
             <section>
                 <h1>Dados dos sensores </h1>
-
-                <button className={estilo.criar}>
-                    <FontAwesomeIcon icon={faFileCirclePlus} size="lg"/>
-                     Novo registro
-                </button>
+                <Link to={'/criar'}>
+                    <button className={estilo.criar}>
+                        <FontAwesomeIcon icon={faFileCirclePlus} size="lg"/>
+                         Novo registro
+                    </button>
+                </Link>
                 <table>
                     <thead>
                         <tr>
@@ -33,7 +36,11 @@ export function Sensores(){
                             <td>Latitude</td>
                             <td>Longitude</td>
                             <td>Status</td>
-                            <td><button className={estilo.editar}><FontAwesomeIcon icon={faPenToSquare} /></button></td> 
+
+                            {/* ${item.id} */}
+                            <Link to={`/sensores/1`} >
+                                <td><button className={estilo.editar}><FontAwesomeIcon icon={faPenToSquare} /></button></td> 
+                            </Link>
                             <td><button className={estilo.deletar}><FontAwesomeIcon icon={faTrash}  size="sm"/></button></td> 
                         </tr>
                     </tbody>

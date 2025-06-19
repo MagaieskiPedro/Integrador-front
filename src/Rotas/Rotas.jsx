@@ -5,6 +5,8 @@ import { Sensores } from '../Paginas/Sensores'
 import { Grafico } from '../Paginas/Grafico'
 import { Cadastro } from '../Paginas/Cadastro'
 import { Login } from '../Paginas/Login'
+import { FormCriar } from '../Paginas/FormCriar';
+import { FormEditar } from '../Paginas/FormEditar';
 
 export function Rotas(){
     return(
@@ -15,6 +17,8 @@ export function Rotas(){
                     <Route path='/grafico' element={<Grafico/>}/>
                     <Route path='/cadastro' element={<Cadastro/>}/>
                     <Route path='/login' element={<Login/>}/>
+                    <Route path='/criar' element={<FormCriar/>}/>
+                    <Route path='/sensores/:id'element={<FormEditar/>}/>
                 </Route>
             </Routes>
     )
