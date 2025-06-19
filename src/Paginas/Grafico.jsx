@@ -1,13 +1,13 @@
-import estilo from "./Historico.module.css"
+import estilo from "./Grafico.module.css"
 
-export function Historico(){
+export function Grafico(){
 
     return(
         <main className={estilo.container}>
             <section>
-                <h1>Aqui fica o CRUD</h1>
+                <h1>Grafico de sensores</h1>
                 
-                
+
             </section>
 
         </main>

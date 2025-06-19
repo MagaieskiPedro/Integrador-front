@@ -7,14 +7,14 @@ export function Cabecalho(){
             <h1>LOGO</h1>
             <nav>
                 <ul>
-                    <Link to="/home">
+                    <Link to="/">
                         <li>Home</li>
-                    </Link>
-                    <Link to="/historico">
-                        <li>Histórico</li>
                     </Link>
                     <Link to="/sensores">
                         <li>Sensores</li>
+                    </Link>
+                    <Link to="/grafico">
+                        <li>Grafico</li>
                     </Link>
                     <Link to="/cadastro">
                         <li>Cadastro</li>

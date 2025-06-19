@@ -1,0 +1,57 @@
+.container section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container h1{
+    margin-bottom: 20px;
+}
+.container table,th{
+    border: 2px solid;
+    border-color: #A9A9A9;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.criar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 35%;
+    margin-bottom: 10px;
+    width: 129px;
+    height: 28px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+.criar:hover{
+    border: 1px solid;
+    border-color: black;
+    background-color: white;
+    color: black;
+}
+.editar{
+    border: none;
+    background-color: black;
+    color: white;
+}
+.editar:hover{
+    border: 1px solid;
+    border-color: black;
+    background-color: white;
+    color: black;
+}
+
+.deletar{
+    border: none;
+    background-color: #DA3B01;
+    color: white;
+}
+.deletar:hover{
+    border: 1px solid;
+    border-color: #DA3B01;
+    background-color: white;
+    color: #DA3B01;
+}
