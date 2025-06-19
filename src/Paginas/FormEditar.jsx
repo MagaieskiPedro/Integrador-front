@@ -7,7 +7,7 @@ export function FormEditar(){
                 <h1>Altere um dado: </h1>
                 <form action="">
                     <label htmlFor="sensor">Sensor: 
-                        <input type="text" name="sensor"/>
+                        <input type="text" name="sensor" id="sensor"/>
                     </label>
                     
                     <label htmlFor="mac_address">Endereço mac: 
