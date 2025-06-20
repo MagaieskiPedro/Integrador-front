@@ -4,13 +4,33 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 .container footer{
     position:sticky
 }
-.container h2{
+.container h1{
     font-size: 48px;
-    color: #FFFFFF;
-    font-family: 'Porter Sans Block', sans-serif;
+    color: white;
+    font-family: "VT323", monospace;
     text-align: center;
+    margin-right: 10rem;
+}
+.container nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.container p{
+    color: white;
+    margin-right: 1em;
+}
+.container a{
+    color: white;
+    margin-right: 1em;
+   text-decoration: none;
+}
+.container a:hover{
+    color:#FF8A62;   
 }

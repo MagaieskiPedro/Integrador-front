@@ -26,7 +26,7 @@
     text-decoration: none ;
     color: #000000; 
 }.container li:hover{
-    color:orange;   
+    color:#FF8A62;   
 }
 .container a:link{
     color:#000000;
@@ -36,7 +36,7 @@
 .container h1{
     margin-left: 46px;
     font-size: 48px;
-    color: #DA3B01;
-    font-family: Porter Sans Block;
+    color: black;
+    font-family: "VT323", monospace;
     text-align: center;
 }

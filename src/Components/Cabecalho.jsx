@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 export function Cabecalho(){
     return (
         <header className={estilo.container}>
-            <h1>LOGO</h1>
+            <h1>Smart City</h1>
             <nav>
                 <ul>
                     <Link to="/">

@@ -46,3 +46,7 @@
     gap: 10px;
     flex-direction: column;
 }
+.container p{
+    font-size: smaller;
+    color: #DA3B01;
+}

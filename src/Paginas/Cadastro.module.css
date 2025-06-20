@@ -49,3 +49,6 @@
     font-size: smaller;
     color: #DA3B01;
 }
+.container select, option{
+    background-color: white;
+}

@@ -5,32 +5,8 @@ import { faFileCirclePlus,faPenToSquare,faTrash } from "@fortawesome/free-solid-
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-
-import {z} from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
-
 const API_URL = 'http://127.0.0.1:8000';
 
-const schemaSensor = z.object({
-    sensor: z.string()
-        .min(1,'Informe o nome do sensor')
-        .max(50, 'Informe um nome de sensor de até 50 caracteres'),
-    mac_address: z.string()
-        .min(1,'Informe o endereço mac')
-        .max(50, 'Informe um endereço mac de até 50 caracteres'),
-    unidade_med: z.string()
-        .min(1,'Informe a unidade de medida')
-        .max(50, 'Informe uma unidade de medida de até 50 caracteres'),
-    latitude: z.string()
-        .min(1,'Informe a latitude do sensor')
-        .max(50, 'Informe uma latitude de até 50 caracteres'),
-    longitude: z.string()
-        .min(1,'Informe a longitude do sensor')
-        .max(50, 'Informe uma longitude de até 50 caracteres'),
-    status: z.string()
-        .min(1,'Informe o Status')
-        .max(50, 'Informe um Status de até 50 caracteres'),
-})
 
 export function Sensores(){
     // Hook de dados
@@ -54,9 +30,14 @@ export function Sensores(){
         }
     };
 
+    const editarDado = async (IDNTY) => {
+        // Sei q é gambiarra, mas n vou mudar todo o código pra fazer um modal só agora
+        localStorage.setItem("id-atual",IDNTY)
+    }
+
     const deletarDado = async (IDNTY) => {
         try{
-           const response = await axios.delete(`${API_URL}/api/sensores/${IDNTY}`, {
+           const response = await axios.delete(`${API_URL}/api/sensores/${IDNTY}/`, {
                 headers: {
                     'Authorization': `Bearer ${access_token}`,
                     'Content-Type': 'application/json'
@@ -104,13 +85,13 @@ export function Sensores(){
                                 <td>{sensor.unidade_med}</td>
                                 <td>{sensor.latitude}</td>
                                 <td>{sensor.longitude}</td>
-                                <td>{sensor.status}</td>
-
-                                {/* ${item.id} */}
-                                <Link to={`/sensores/${sensor.id}`} >
-                                    <td><button className={estilo.editar}><FontAwesomeIcon icon={faPenToSquare} /></button></td> 
-                                </Link>
-                                <td><button className={estilo.deletar}><FontAwesomeIcon icon={faTrash}  size="sm"/></button></td> 
+                                <td>{sensor.status ? 'True': 'False'}</td>
+                                <td>
+                                    <Link to={`/sensores/${sensor.id}`} >
+                                        <button className={estilo.editar} onClick={() =>editarDado(sensor.id)}><FontAwesomeIcon icon={faPenToSquare} /></button> 
+                                    </Link>
+                                </td>
+                                <td><button className={estilo.deletar} onClick={() =>deletarDado(sensor.id)}><FontAwesomeIcon icon={faTrash}  size="sm"/></button></td> 
                             </tr>
                         ))}
    
@@ -120,9 +101,11 @@ export function Sensores(){
                 </table>
                 ) : (
             <table>
-                <tr>
-                    <th>Sem Dados aqui</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Sem Dados aqui</th>
+                    </tr>
+                </thead>
             </table>
             )}
 

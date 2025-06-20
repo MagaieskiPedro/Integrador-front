@@ -77,7 +77,7 @@ export function Cadastro(){
                     <label htmlFor="categoria">Categoria de usuario: </label>
                     <select {...register('categoria')} name="categoria">
                         <option value="C">Comum</option>
-                        <option value="A">Admininstrador</option>
+                        <option value="A">Administrador</option>
                     </select>
                     <button type="submit">Cadastrar</button>
                 </form>
