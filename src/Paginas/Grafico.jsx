@@ -64,7 +64,7 @@ export function Grafico(){
         <main className={estilo.container}>
             <section>
                 <h1>Grafico de sensores</h1>
-                <button onClick={() =>baixaExcel()}>Baixar excel</button>
+                <button onClick={() => baixaExcel()}>Baixar excel</button>
 
                 <Chart
                     chartType="ScatterChart"
