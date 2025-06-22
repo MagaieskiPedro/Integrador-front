@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCirclePlus,faPenToSquare,faTrash } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { tr } from "zod/v4/locales";
+
+import { saveAs } from 'file-saver';
 
 const API_URL = 'http://127.0.0.1:8000';
 
@@ -19,10 +20,25 @@ export function Grafico(){
     // token de acesso
     const access_token = localStorage.getItem('access_token')
 
-    // Metodos de Get e Delete
-    const obterDados = async() => {
-        
-    };
+    const baixaExcel = async () =>{ 
+                try{
+           const response = await axios.get(`${API_URL}/api/ambientes/download/`, {
+                headers: {
+                    'Authorization': `Bearer ${access_token}`,
+                    'Content-Type': 'application/json'
+                  },
+                method: 'GET',
+                responseType: 'arraybuffer'
+            });
+            const blob = new Blob([response.data], {
+                type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+            })
+
+            saveAs(blob, 'dados.xlsx')
+        }catch (error) {
+            console.log('errinho:   - ',  error)
+        }
+    }
 
     useEffect(() => {
         const carregarDados = async() => {
@@ -48,6 +64,7 @@ export function Grafico(){
         <main className={estilo.container}>
             <section>
                 <h1>Grafico de sensores</h1>
+                <button onClick={() =>baixaExcel()}>Baixar excel</button>
 
                 <Chart
                     chartType="ScatterChart"
